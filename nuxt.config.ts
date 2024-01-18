@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   devServer: { port: 8888 },
   runtimeConfig: {
     public: {
-      baseURL: "http://directus-t.itcast.cn/items",
+      baseURL: "https://directus-t.itcast.cn/items",
     },
   },
   modules: ["@element-plus/nuxt", "@pinia/nuxt", "@vueuse/nuxt"],
