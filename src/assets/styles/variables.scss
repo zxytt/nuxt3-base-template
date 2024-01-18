@@ -1,0 +1,43 @@
+// 全局变量
+
+// 因为这两个变量会使用在 @media 上，而 @media 不支持使用 css var ，所以使用 scss var 代替
+// https://stackoverflow.com/questions/40722882/css-native-variables-not-working-in-media-queries
+$g-app-width: 1400px;
+$g-header-width: 100%;
+
+// 全局变量
+$--color-primary: #247ffc !default;
+$--color-whites: #fff !default;
+$--color-desc: #666 !default;
+$--color-blacks: #000 !default;
+$--color-text: #465161;
+$--color-text-primary: #333 !default;
+$--color-success: #12cb8f;
+$--color-error: #ee4435;
+$--color-cancel: #ccc;
+$--color-warning: #eeb513;
+$--color-sub: #999;
+$--color-border: #ebeef5;
+$-bg-light: #f5f7fa;
+$--font-size: 14px;
+$--font-size-big: 18px;
+$--font-size-large: 16px;
+$--font-size-min: 12px;
+:root {
+  --color-primary: #{$--color-primary};
+  --color-desc: #{$--color-desc};
+  --color-whites: #{$--color-whites};
+  --color-blacks: #{$--color-blacks};
+  --color-text: #{$--color-text};
+  --font-size-big: #{$--font-size-big};
+  --font-size: #{$--font-size};
+  --font-size-min: #{$--font-size-min};
+  --font-size-large: #{$--font-size-large};
+  --color-success: #{$--color-success};
+  --color-error: #{$--color-error};
+  --el-text-color-regular: #{$--color-text-primary};
+  --color-cancel: #{$--color-cancel};
+  --color-warning: #{$--color-warning};
+  --color-sub: #{$--color-sub};
+  --el-font-weight-primary: 400;
+}

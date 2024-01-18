@@ -1,0 +1,46 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev --mode dev",
+    "test": "nuxt dev --mode test",
+    "uat": "nuxt dev --mode uat",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "code-lint-all": "eslint --quiet -c ./.vscode/code-lint-vue3.json --ignore-path ./.vscode/.eslintignore --no-eslintrc --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts ./",
+    "code-lint-all-quiet": "eslint --quiet -o ./code-lint-all-output.json -f json -c ./.vscode/code-lint-vue3.json --ignore-path ./.vscode/.eslintignore --no-eslintrc --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts ./ || exit 0"
+  },
+  "devDependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "@element-plus/nuxt": "^1.0.7",
+    "@nuxt/devtools": "latest",
+    "@pinia/nuxt": "^0.5.1",
+    "@vue/eslint-config-prettier": "7",
+    "@vueuse/core": "^10.7.0",
+    "@vueuse/nuxt": "^10.7.1",
+    "element-plus": "^2.4.4",
+    "eslint": "^8.56.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-vue": "^9.20.0",
+    "husky": "7",
+    "nuxt": "^3.9.0",
+    "pinia": "^2.1.7",
+    "prettier": "2",
+    "sass": "^1.69.5",
+    "undefined": "^0.1.0",
+    "unplugin-auto-import": "^0.17.2",
+    "vue": "^3.3.13",
+    "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@directus/sdk": "^14.0.0"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx,vue,cjs,mjs,cts,mts}": "eslint --quiet -f ./.vscode/code-lint-stylish-formatter.cjs -c ./.vscode/code-lint-vue3.json --ignore-path ./.vscode/.eslintignore --no-eslintrc"
+  }
+}

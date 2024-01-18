@@ -1,0 +1,28 @@
+@import "./common.scss";
+@import "./element.plus.override.scss";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  transition: background-color 0.3s;
+  box-sizing: border-box;
+  font-family: Lato, "PingFang SC";
+  font-size: 14px;
+  &.hidden {
+    overflow: hidden;
+  }
+}
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: thin;
+  scrollbar-color: #ddd transparent;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
