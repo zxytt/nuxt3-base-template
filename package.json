@@ -38,7 +38,8 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
-    "@directus/sdk": "^14.0.0"
+    "@directus/sdk": "^14.0.0",
+    "http-proxy-middleware": "^2.0.6"
   },
   "lint-staged": {
     "*.{js,ts,jsx,tsx,vue,cjs,mjs,cts,mts}": "eslint --quiet -f ./.vscode/code-lint-stylish-formatter.cjs -c ./.vscode/code-lint-vue3.json --ignore-path ./.vscode/.eslintignore --no-eslintrc"
