@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   devServer: { port: 8888 },
   runtimeConfig: {
     public: {
-      baseURL: "https://directus-t.itcast.cn/items",
+      baseURL: "http://directus-t.itcast.cn/items",
     },
   },
   modules: ["@element-plus/nuxt", "@pinia/nuxt", "@vueuse/nuxt"],
@@ -16,7 +16,7 @@ export default defineNuxtConfig({
   nitro: {
     devProxy: {
       "/api": {
-        target: "https://directus-t.itcast.cn/items",
+        target: "http://directus-t.itcast.cn/items",
         changeOrigin: true,
       },
     },
