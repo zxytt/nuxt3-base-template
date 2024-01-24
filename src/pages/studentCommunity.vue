@@ -15,7 +15,6 @@
 <script setup>
 const carsList = ref();
 const res = await useFetch("https://directus-t.itcast.cn/items/cars");
-console.log("res", res);
 carsList.value = res.data.value.data;
 // const asyncData = async () => {
 //   console.log("asyncData");
