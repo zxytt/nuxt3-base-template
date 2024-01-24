@@ -5,7 +5,4 @@ export default defineNuxtConfig({
   devServer: { port: 8888 },
   modules: ["@element-plus/nuxt", "@pinia/nuxt", "@vueuse/nuxt"],
   css: ["element-plus/dist/index.css", "@/assets/styles/global.scss"],
-  generate: {
-    routes: ["/studentCommunity"],
-  },
 });
