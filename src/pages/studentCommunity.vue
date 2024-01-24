@@ -14,14 +14,15 @@
 
 <script setup>
 const carsList = ref();
-const asyncData = async () => {
-  useFetch("https://directus-t.itcast.cn/items/cars").then((res) => {
-    carsList.value = res.data.value.data;
-  });
-};
-onMounted(() => {
-  asyncData();
-});
+const res = await useFetch("https://directus-t.itcast.cn/items/cars");
+console.log("res", res);
+carsList.value = res.data.value.data;
+// const asyncData = async () => {
+//   console.log("asyncData");
+//   useFetch("https://directus-t.itcast.cn/items/cars").then((res) => {
+//     carsList.value = res.data.value.data;
+//   });
+// };
 </script>
 
 <style lang="scss" scoped>
