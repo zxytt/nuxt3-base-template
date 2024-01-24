@@ -1,24 +1,11 @@
 export default defineNuxtConfig({
-  ssr: false,
+  ssr: true,
   srcDir: "src/",
   devtools: { enabled: true }, // 开启调试工具
   devServer: { port: 8888 },
-  runtimeConfig: {
-    public: {
-      baseURL: "http://directus-t.itcast.cn/items",
-    },
-  },
   modules: ["@element-plus/nuxt", "@pinia/nuxt", "@vueuse/nuxt"],
   css: ["element-plus/dist/index.css", "@/assets/styles/global.scss"],
-  imports: {
-    dirs: ["apis"],
-  },
-  nitro: {
-    devProxy: {
-      "/api": {
-        target: "http://directus-t.itcast.cn/items",
-        changeOrigin: true,
-      },
-    },
-  },
+  // generate: {
+  //   routes: ["/studentCommunity"],
+  // },
 });
