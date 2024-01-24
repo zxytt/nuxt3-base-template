@@ -1,7 +1,7 @@
 <template>
   <Title>学员社区</Title>
   <div>
-    <div v-for="car in carsList.data" :key="car.id" class="car-item">
+    <div v-for="car in carsList" :key="car.id" class="car-item">
       <h3>{{ car.name }}</h3>
       <img
         class="car-pic"
@@ -13,10 +13,11 @@
 </template>
 
 <script setup>
-const carsList = reactive({ data: [] });
+const carsList = ref();
 const getDataFn = async () => {
-  const { data } = await getDataApi();
-  carsList.data = data;
+  useFetch("https://directus-t.itcast.cn/items/cars").then((res) => {
+    carsList.value = res.data.value.data;
+  });
 };
 onMounted(() => {
   getDataFn();
