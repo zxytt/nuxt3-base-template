@@ -14,13 +14,13 @@
 
 <script setup>
 const carsList = ref();
-const getDataFn = async () => {
+const asyncData = async () => {
   useFetch("https://directus-t.itcast.cn/items/cars").then((res) => {
     carsList.value = res.data.value.data;
   });
 };
 onMounted(() => {
-  getDataFn();
+  asyncData();
 });
 </script>
 
